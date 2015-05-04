@@ -1,4 +1,6 @@
 
+import javax.naming.spi.DirStateFactory.Result;
+import org.junit.After;
 import org.junit.Test;
 
 /*
@@ -12,9 +14,17 @@ import org.junit.Test;
  */
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.notification.Failure;
 public class MainTest {
     private static soal s;
    
+    @Before
+    public void awalTest(){
+        s= new soal();
+        System.out.println("Mengawali testing");
+    }
     @Test
      public void test1(){
        
@@ -23,7 +33,7 @@ public class MainTest {
     
     public void test2(){
        
-     assertSame("Harusnya hasilnya 2", s.faktorial(2));
+     assertSame("Harusnya hasilnya ",2, s.faktorial(2));
     }
     
     @Test
@@ -35,21 +45,34 @@ public class MainTest {
      @Test
     public void test4(){
        
-     assertSame("Seharusnya 4", s.pangkat(2, 2));
+     assertSame("Seharusnya",4, s.pangkat(2, 2));
     }
     
      @Test
     public void test5(){
        
-     assertSame("Seharusnya 20", s.perkalian(5, 4));
+     assertSame("Seharusnya",20, s.perkalian(5, 4));
     }
      
+     @Test
       public void test6(){
        
-     assertSame("Seharusnya 25", s.perkalian(5, 5));
+     assertSame("Seharusnya",25, s.perkalian(5, 5));
     }
     
-     
+     @After
+     public void nakhirTest(){
+         System.out.println("Mengakhiri Testing");
+     }
    
+     public static void main(String[] args) {
+        org.junit.runner.Result result= JUnitCore.runClasses(MainTest.class);
+        
+         for (Failure failure : result.getFailures()) {
+             System.out.println(failure.toString());
+         }
+         
+         System.out.println(result.wasSuccessful());
+    }
     
 }

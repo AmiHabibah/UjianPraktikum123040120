@@ -10,6 +10,6 @@
 public class MainSoal {
     public static void main(String[] args) {
         soal s= new soal();
-        System.out.println(s.perkalian(5, 5));
+        System.out.println("hasil = "+s.faktorial(3));
     }
 }
