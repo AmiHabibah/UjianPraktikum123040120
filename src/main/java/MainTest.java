@@ -18,7 +18,7 @@ public class MainTest {
     @Test
      public void test1(){
        
-      assertNotNull("Harusnya Bilangan Tidak boleh Null", s.faktorial(0));
+      assertSame("Harusnya ", 6, s.faktorial(3));
     }
     
     public void test2(){
