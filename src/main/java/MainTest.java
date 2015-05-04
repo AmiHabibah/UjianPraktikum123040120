@@ -38,7 +38,7 @@ public class MainTest {
     
     @Test
     public void test3(){
-       
+       //TestPangkat1
       assertNotNull("Harusnya Bilangan Tidak boleh Null", s.pangkat(0, 5));
     }
     
