@@ -27,7 +27,7 @@ public class MainTest {
     }
     @Test
      public void test1(){
-       
+       //TestFaktorial1
       assertSame("Harusnya ", 6, s.faktorial(3));
     }
     
@@ -39,7 +39,7 @@ public class MainTest {
     @Test
     public void test3(){
        
-      assertNotNull("Harusnya Bilangan Tidak boleh Nol", s.pangkat(0, 5));
+      assertNotNull("Harusnya Bilangan Tidak boleh Null", s.pangkat(0, 5));
     }
     
      @Test
@@ -70,6 +70,7 @@ public class MainTest {
         
          for (Failure failure : result.getFailures()) {
              System.out.println(failure.toString());
+             System.out.println("Tidak Sukses");
          }
          
          System.out.println(result.wasSuccessful());
