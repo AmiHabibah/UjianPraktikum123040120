@@ -44,7 +44,7 @@ public class MainTest {
     
      @Test
     public void test4(){
-       
+       //TestPangkat2
      assertSame("Seharusnya",4, s.pangkat(2, 2));
     }
     
