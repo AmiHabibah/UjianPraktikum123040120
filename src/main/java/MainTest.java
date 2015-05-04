@@ -32,7 +32,7 @@ public class MainTest {
     }
     
     public void test2(){
-       
+        //TestFaktorial2
      assertSame("Harusnya hasilnya ",2, s.faktorial(2));
     }
     
